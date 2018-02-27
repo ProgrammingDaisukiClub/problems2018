@@ -4,7 +4,6 @@
 #include "constraints.h"
 
 using namespace std;
-const int modified_max = 2017+100;
 
 void generate(const string &file_name, int num_case, int max_num) {
   ofstream ofs(file_name);
