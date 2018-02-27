@@ -1,6 +1,8 @@
 # Problems2018
 Problems for Waseda CS orientation 2018
 
+問題案はissueへ！
+
 # Past Problems
 
 * [2017](https://github.com/AI-comp/Problems2017)
@@ -8,7 +10,18 @@ Problems for Waseda CS orientation 2018
 * [2015](https://github.com/AI-comp/Orientation2015Problems)
 * [2014](https://github.com/AI-comp/Orientation2014Problems) - [順位表](https://drive.google.com/file/d/0BzlMTVLOBnPmN25pWFBYbXN5STA/view?usp=sharing)
 
-## How to Solve and Test Problems
+# How to Create a new Problem
+
+1. 問題ディレクトリ作成（プロジェクトトップで以下実行）
+```
+rime add . problem <problem_name>
+```
+
+2. `statement.md` を書く．
+
+3. 必要に応じてwriter解，input generator, input validatorを作る．[testlib](https://github.com/MikeMirzayanov/testlib)を使おう．
+
+# How to Solve and Test Problems
 
 1. [rime](https://github.com/icpc-jag/rime)をインストール
 ```
