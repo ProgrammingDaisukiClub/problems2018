@@ -31,7 +31,7 @@ rime add . problem <problem_name>
 
 3. 問題文ファイル `statement.md` を作成して，書く．
 
-4. 必要に応じてwriter解（次の「解の追加」も参照），input generator, input validatorを作る．generator, validatorには[testlib](https://github.com/MikeMirzayanov/testlib)を使おう．`PROBLEM` ファイルの `reference_solution` にはwriter解を指定する．
+4. 必要に応じてwriter解（次の「解の追加」も参照），input generator, input validatorを作る．`PROBLEM` ファイルの `reference_solution` にはwriter解を指定する．
 
 ## 解の追加とテスト
 
@@ -60,6 +60,8 @@ rime add <problem_dir_name> solution <solution_name>
 
 説明が面倒なので `a+b` をサンプルに作成してください．
 
-なお，今回，問題の制約で指定する定数群は `constraints.h` に記載し，各generatorやvalidarorが参照するようにしましょう．
+これらの作成に，[testlib](https://github.com/MikeMirzayanov/testlib)（[codeforces上での説明](http://codeforces.com/testlib)）を使おう．（このレポジトリの `/common/testlib.h` が該当ファイルです）
+
+今回，問題の制約で指定する定数群は `constraints.h` に記載し，各generatorやvalidarorが参照するようにしましょう．
 
 他にもrimeの機能はあるので，詳しく知りたい場合はこちら： https://rime.readthedocs.io/ja/latest/ （ただし，リンク先はver.1について述べているけど，rimeは最新はver.2）
