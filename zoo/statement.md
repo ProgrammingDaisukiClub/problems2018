@@ -39,7 +39,7 @@ $t_M$
 
 # Output
 各テストケースに対して、出力は $M$行からなる。
-$i$ 行目に $t_i$ を見た時のP子1行ずつ出力せよ。
+$i$ 行目に $t_i$ を見た時のP子さんの発言を1行ずつ出力せよ。
 
 
 # Sample Input
@@ -88,7 +88,3 @@ kawaii
 moumita
 moumita
 ```
-
-# Solution
-シミュレーションする。
-
