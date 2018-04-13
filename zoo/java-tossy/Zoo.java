@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+// Fast O(N+M) implementation
 public class Zoo {
     private static final Scanner sc = new Scanner(System.in);
     private static final String RESULT_FIRST = "kawaii";
@@ -38,7 +39,7 @@ public class Zoo {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final int T = sc.nextInt();
         for (int i = 0; i < T; i++) {
             solve();
