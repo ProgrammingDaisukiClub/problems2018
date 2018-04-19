@@ -12,12 +12,14 @@ P子さんは動物園に来ました。園内を回って、順番に $M$ 匹�
 * その動物を知らない時は "siranai"
 
 と言うことが分かっているので、P子さんが、何と言ったかを再現せよ。
+ただし、動物園で知らない動物を見たとしても、P子さんの知っている動物の種類が増えないことに注意せよ(Sampleも参照)。
 
 # Constraints
 
 * $1 \leq N \leq 100$
 * $1 \leq M \leq 100$
-* $s_i , t_i$は英小文字のみで構成され、20文字以下
+* $s_i , t_i$ は英小文字のみで構成され、20文字以下
+* $N$ 種類の動物の名前は異なる
 
 # Input
 1つの入力ファイルは複数のテストケースからなる。
@@ -44,7 +46,7 @@ $i$ 行目に $t_i$ を見た時のP子さんの発言を1行ずつ出力せよ�
 
 # Sample Input
 ```
-2
+3
 6
 panda
 koala
@@ -70,6 +72,13 @@ dog
 cat
 cat
 cat
+1
+angel
+4
+human
+human
+human
+human
 ```
 
 # Sample Output
@@ -87,4 +96,12 @@ kawaii
 kawaii
 moumita
 moumita
+siranai
+siranai
+siranai
+siranai
 ```
+
+2ケース目で、P子さんはcatを知っているので、初めて見た時には "kawaii" と発言するが、2回目以降は "moumita" と発言する。
+
+3ケース目で、P子さんはangelしか知らないので、humanを何度見ても "siranai" と発言する。このように、動物園で見た動物が新たに知っている動物にならないことに注意せよ。
