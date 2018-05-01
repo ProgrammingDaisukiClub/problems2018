@@ -3,7 +3,7 @@ GPA JANKENとは
 「じゃんけんをして、じゃんけんの結果に関わらずGPAが高い方が問答無用で勝ち」
 というルールのゲームです。
 GPAが同じ場合引き分けになります。
-（ここでいうGPAとはGanbari Point Accumulateの略で、0から4のいずれかの整数です）
+（ここでいうGPAとはGanbari Point Accumulateの略で、0から4のいずれかの整数です。）
 
 カトー君とサトー君がGPA JANKENをしました。
 カトー君のGPAは$A$、サトー君のGPAは$B$です。
