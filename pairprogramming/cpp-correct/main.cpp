@@ -11,7 +11,7 @@ int main() {
     for (int j = 0; j < n; j++) {
       int a;
       cin >> a;
-      int m = (m + a) % 2;
+      m = (m + a) % 2;
       cout << m << endl;
     }
   }
