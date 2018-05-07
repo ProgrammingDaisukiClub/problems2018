@@ -9,13 +9,13 @@ void check_case(){
   int n = inf.readInt(1, MAX_N, "N");
   inf.readEoln();
   for(int i=0;i<n;i++){
-  	string str=inf.readToken("[a-z]{1,20}","s");
+  	string str=inf.readToken(format("[a-z]{1,%d}", MAX_LEN),"s");
   	inf.readEoln();
   }
   int m = inf.readInt(1, MAX_M, "M");
   inf.readEoln();
   for(int i=0;i<m;i++){
-  	string str=inf.readToken("[a-z]{1,20}","s");
+  	string str=inf.readToken(format("[a-z]{1,%d}", MAX_LEN),"s");
   	inf.readEoln();
   }
 }

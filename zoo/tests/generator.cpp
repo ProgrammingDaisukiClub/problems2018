@@ -16,7 +16,8 @@ void generate(const string &file_name, int num_case, int n, int m) {
     vector<string> a;
     for(int j=0; j<n; j++) {
       while(1){
-        string animal = pattern("[a-z]{1,20}").next(rnd);
+        //string animal = pattern("[a-z]{1,20}").next(rnd);
+        string animal = pattern(format("[a-z]{1,%d}", MAX_LEN)).next(rnd);
         if(know.count(animal)) continue;
 
         ofs << animal << endl;
