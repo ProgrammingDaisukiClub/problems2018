@@ -4,9 +4,9 @@
 using namespace std;
 
 void check_case(){
-  int a = inf.readInt(-MAX_AB, MAX_AB, "A");
+  int a = inf.readInt(MIN_AB, MAX_AB, "A");
   inf.readSpace();
-  int b = inf.readInt(-MAX_AB, MAX_AB, "B");
+  int b = inf.readInt(MIN_AB, MAX_AB, "B");
   inf.readEoln();
 }
 
