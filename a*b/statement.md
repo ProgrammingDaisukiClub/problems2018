@@ -38,6 +38,8 @@ $A$ $B$
 
 # Sample Programs
 
+以下の内容は，Practice Contestの問題 A+B と同等です．理解できている人は読み飛ばして構いません．
+
 ## C
 
 ```
@@ -79,57 +81,33 @@ public class Main {
 
 ## C
 
-* コンパイル・実行 (C)
+### コンパイル・実行
 
 ```
-gcc main.c
-./a.out
+> gcc main.c
+> ./a.out
 ```
 
-コンパイルでは必要に応じて、``-O2``や``-Wall``などのコンパイルオプションを使用するとよいかもしれない。
+コンパイルでは必要に応じて、``-O2``や``-Wall``などのコンパイルオプションを使用するとよい場合がある。
 
-* ファイルから入力する
-
-```
-./a.out < in.txt
-```
-
-* ファイルへ出力する
+### ファイル入出力を同時に行う（`in.txt`から入力して`out.txt`に出力）
 
 ```
-./a.out > out.txt
-```
-
-* ファイル入出力を同時に行う
-
-```
-./a.out < in.txt > out.txt
+> ./a.out < in.txt > out.txt
 ```
 
 ## Java
 
-* コンパイル・実行
+### コンパイル・実行
 
 ```
-javac Main.java
-java Main
+> javac Main.java
+> java Main
 ```
 
-* ファイルから入力する
+### ファイル入出力を同時に行う（`in.txt`から入力して`out.txt`に出力）
 
 ```
-java Main < in.txt
-```
-
-* ファイルへ出力する
-
-```
-java Main > out.txt
-```
-
-* ファイル入出力を同時に行う
-
-```
-java Main < in.txt > out.txt
+> java Main < in.txt > out.txt
 ```
 
