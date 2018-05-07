@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -5,6 +6,7 @@ import java.util.Set;
 // Fast O(N+M) implementation
 public class Zoo {
     private static final Scanner sc = new Scanner(System.in);
+    private static final PrintWriter pw = new PrintWriter(System.out);
     private static final String RESULT_FIRST = "kawaii";
     private static final String RESULT_SEEN = "moumita";
     private static final String RESULT_UNKNOWN = "siranai";
@@ -28,13 +30,13 @@ public class Zoo {
             final String currentAnimal = sc.next();
             if (knownAnimals.contains(currentAnimal)) {
                 if (!seenAnimals.contains((currentAnimal))) {
-                    System.out.println(RESULT_FIRST);
+                    pw.println(RESULT_FIRST);
                     seenAnimals.add(currentAnimal);
                 } else {
-                    System.out.println(RESULT_SEEN);
+                    pw.println(RESULT_SEEN);
                 }
             } else {
-                System.out.println(RESULT_UNKNOWN);
+                pw.println(RESULT_UNKNOWN);
             }
         }
     }
@@ -44,5 +46,7 @@ public class Zoo {
         for (int i = 0; i < T; i++) {
             solve();
         }
+        sc.close();
+        pw.close();
     }
 }
