@@ -1,0 +1,14 @@
+contest_name: Sample Contest
+problems:
+  - dir_name: a+b
+    data_sets:
+      - label: Small
+        score: 10
+      - label: Large
+        score: 100
+  - dir_name: string
+    data_sets:
+      - label: Small
+        score: 50
+      - label: Large
+        score: 1114514

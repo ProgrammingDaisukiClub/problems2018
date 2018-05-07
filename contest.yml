@@ -1,0 +1,60 @@
+contest_name: Orientation Contest 2018 (test)
+problems:
+  - dir_name: a*b
+    data_sets:
+      - label: Small
+        score: 5
+      - label: Large
+        score: 5
+  - dir_name: gpajanken
+    data_sets:
+      - label: Small
+        score: 10
+      - label: Large
+        score: 100
+  - dir_name: shimashima
+    data_sets:
+      - label: Small
+        score: 10
+      - label: Large
+        score: 100
+  - dir_name: pairprogramming
+    data_sets:
+      - label: Small
+        score: 15
+      - label: Large
+        score: 150
+  - dir_name: battle_royal
+    data_sets:
+      - label: Small
+        score: 20
+      - label: Large
+        score: 200
+  - dir_name: zoo
+    data_sets:
+      - label: Small
+        score: 30
+      - label: Large
+        score: 300
+  - dir_name: even2primes
+    data_sets:
+      - label: Small
+        score: 40
+      - label: Medium
+        score: 400
+      - label: Large
+        score: 400
+  - dir_name: tsunahiki
+    data_sets:
+      - label: Small
+        score: 50
+      - label: Large
+        score: 600
+  - dir_name: two-squares
+    data_sets:
+      - label: Small
+        score: 50
+      - label: Medium
+        score: 400
+      - label: Large
+        score: 400
