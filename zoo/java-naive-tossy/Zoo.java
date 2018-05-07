@@ -1,8 +1,10 @@
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 // Naive O(NM) implementation
 public class Zoo {
     private static final Scanner sc = new Scanner(System.in);
+    private static final PrintWriter pw = new PrintWriter(System.out);
     private static final String RESULT_FIRST = "kawaii";
     private static final String RESULT_SEEN = "moumita";
     private static final String RESULT_UNKNOWN = "siranai";
@@ -18,26 +20,26 @@ public class Zoo {
 
     private static void solve() {
         final int n = sc.nextInt();
-        String knownAnimals[] = new String[n];
+        final String knownAnimals[] = new String[n];
         for (int i = 0; i < n; i++) {
             knownAnimals[i] = sc.next();
         }
 
         final int m = sc.nextInt();
-        String checkAnimals[] = new String[m];
+        final String checkAnimals[] = new String[m];
         for (int i = 0; i < m; i++) {
             checkAnimals[i] = sc.next();
 
             if (checkAppearance(knownAnimals, n, checkAnimals[i])) {
                 // known
                 if (checkAppearance(checkAnimals, i, checkAnimals[i])) {
-                    System.out.println(RESULT_SEEN);
+                    pw.println(RESULT_SEEN);
                 } else {
-                    System.out.println(RESULT_FIRST);
+                    pw.println(RESULT_FIRST);
                 }
             } else {
                 // unknown
-                System.out.println(RESULT_UNKNOWN);
+                pw.println(RESULT_UNKNOWN);
             }
         }
     }
@@ -47,5 +49,7 @@ public class Zoo {
         for (int i = 0; i < T; i++) {
             solve();
         }
+        sc.close();
+        pw.close();
     }
 }
