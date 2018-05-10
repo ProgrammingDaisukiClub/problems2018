@@ -9,7 +9,7 @@ def all_primes(start, end):
    return list(sorted(set(range(start, end + 1)).difference(set((p * f) for p in range(2, int(end ** 0.5) + 2) for f in range(2, (end // p) + 1)))))
 
 def primesfrom2to(n):
-   “”" Input n>=6, Returns a array of primes, 2 <= p < n “”"
+   """ Input n>=6, Returns a array of primes, 2 <= p < n """
    sieve = numpy.ones(n//3 + (n%6 == 2), dtype=numpy.bool)
    for i in range(1, int(n**0.5)//3+1):
        if sieve[i]:

@@ -2,7 +2,7 @@
 
 ## Solution
 #c_solution(src='main.c') # -lm -O2 as default
-cxx_solution(src='main.cpp', flags=[], challenge_cases=['large.in']) # -std=c++11 -O2 as default
+cxx_solution(src='main.cpp', flags=[], challenge_cases=[]) # -std=c++11 -O2 as default
 #java_solution(src='Main.java', encoding='UTF-8', mainclass='Main')
 #java_solution(src='Main.java', encoding='UTF-8', mainclass='Main',
 #              challenge_cases=[])
@@ -17,4 +17,4 @@ cxx_solution(src='main.cpp', flags=[], challenge_cases=['large.in']) # -std=c++1
 #cs_solution(src='main.cs') # C# (mono)
 
 ## Score
-#expected_score()
+expected_score(10)

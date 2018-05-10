@@ -47,6 +47,7 @@ int main() {
       if(mp[4].fi == mp[5].fi && mp[4].se == mp[6].se && mp[5].se == mp[7].se && mp[6].fi == mp[7].fi){
         ll a = abs(mp[0].se - mp[1].se) * abs(mp[0].fi - mp[2].fi);
         ll b = abs(mp[4].se - mp[5].se) * abs(mp[4].fi - mp[6].fi);
+        if(a == 0 || b == 0) continue;
         ll t1 = mmin(a,b);
         ll t2 = mmax(a,b);
         cout << t1 << " " << t2 << endl;
