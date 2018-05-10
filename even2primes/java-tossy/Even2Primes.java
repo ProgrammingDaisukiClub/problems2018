@@ -1,8 +1,10 @@
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Even2Primes {
     private static final Scanner sc = new Scanner(System.in);
+    private static final PrintWriter pw = new PrintWriter(System.out);
     private static final int MAX_N = 5000000;
     private static boolean isPrime[] = new boolean[MAX_N + 1];
 
@@ -33,7 +35,9 @@ public class Even2Primes {
                     answer++;
                 }
             }
-            System.out.println(answer);
+            pw.println(answer);
         }
+        sc.close();
+        pw.close();
     }
 }
