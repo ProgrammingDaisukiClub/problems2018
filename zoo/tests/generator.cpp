@@ -49,7 +49,7 @@ void generate(const string &file_name, int num_case, int n, int m) {
 int main(int argc, char* argv[]) {
   registerGen(argc, argv, 1);
 
-  generate("small.in", 10, 5, 20);
+  // generate("small.in", 10, 5, 20);
   generate("large.in", MAX_T, MAX_N, MAX_M);
   for (int i=0; i<10; i++) {
     generate("random_test" + to_string(i) + ".in", MAX_T, MAX_N, MAX_M);
