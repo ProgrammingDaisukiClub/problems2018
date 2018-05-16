@@ -17,3 +17,6 @@ cxx_validator(src='validator.cpp', dependency=['testlib.h'])
 #cxx_judge(src='judge.cc')
 #java_judge(src='Judge.java', encoding='UTF-8', mainclass='Judge')
 #script_judge(src='judge.py')
+
+subtask_testset(name='All', score=100, input_patterns=['*'])
+subtask_testset(name='Med', score=10, input_patterns=['sample.in', 'small.in', 'medium.in'])
