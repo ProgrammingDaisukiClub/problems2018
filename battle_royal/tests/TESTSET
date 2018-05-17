@@ -15,7 +15,7 @@ cxx_validator(src='validator.cpp', dependency=['testlib.h'])
 
 ## Output judges.
 #c_judge(src='judge.c')
-#cxx_judge(src='judge.cpp', dependency=['testlib.h'],
+#cxx_judge(src='judge.cc', dependency=['testlib.h'],
 #          variant=testlib_judge_runner)
 #java_judge(src='Judge.java', encoding='UTF-8', mainclass='Judge')
 #script_judge(src='judge.py')
@@ -36,7 +36,6 @@ cxx_validator(src='validator.cpp', dependency=['testlib.h'])
 #gcj_merger(output_replace=casenum_replace('Case 1', 'Case {0}'))
 id='X'
 #merged_testset(name=id + '_Merged', input_pattern='*.in')
-subtask_testset(name='All', score=100, input_patterns=['*'])
-subtask_testset(name='Med', score=10, input_patterns=['small.in', 'medium.in'])
+#subtask_testset(name='All', score=100, input_patterns=['*'])
 # precisely scored by judge program like Jiyukenkyu (KUPC 2013)
 #scoring_judge()
