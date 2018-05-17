@@ -83,6 +83,6 @@ if __name__ == '__main__' :
     outfile_name = infile_name.replace(".yml", ".json")
 
     with open(outfile_name, "w", encoding="utf-8") as f :
-        json.dump(data, f, "utf-8", ensure_ascii=False, sort_keys=True)
+        json.dump(data, f, ensure_ascii=False, sort_keys=True)
 
     print("\nSuccessfully output to " + outfile_name)
