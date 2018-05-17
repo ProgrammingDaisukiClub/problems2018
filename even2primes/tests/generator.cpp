@@ -17,7 +17,7 @@ void generate(const string &file_name, int num_case, int max_num) {
 int main(int argc, char* argv[]) {
   registerGen(argc, argv, 1);
 
-  generate("small.in", 5, 32);
+  //generate("small.in", 5, 32);
   generate("medium.in", MAX_T, 500);
   generate("large.in", MAX_T, MAX_E);
   for (int i=0; i<10; i++) {
