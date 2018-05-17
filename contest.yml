@@ -1,6 +1,6 @@
-contest_name: Orientation Contest 2018 (test)
+contest_name: Waseda Orientation Programming Contest 2018
 problems:
-  - dir_name: a*b
+  - dir_name: a-mul-b
     data_sets:
       - label: Small
         score: 5
