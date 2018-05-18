@@ -15,7 +15,8 @@ vector<vector<P>> handmade_med = {
   {{-3000,-3000}, {3000,-3000}, {-3000,3000}, {3000,3000}, {-3000,-3000}, {2999,-3000}, {-3000,2999}, {2999,2999}},
   {{-3000,3000}, {0,3000}, {-3000,0}, {0,0}, {0,0}, {0,3000}, {3000,0}, {3000,3000}},
   {{-3000,-3000}, {-3000,-2999}, {-2999,-3000}, {-2999,-2999}, {-3000,3000}, {-3000,2999}, {-2999,3000}, {-2999,2999}},
-  {{-3000,-3000}, {-3000, -3000}, {3000,-3000}, {3000, -3000}, {-3000,3000}, {-3000,3000}, {3000,3000}, {3000,3000}}
+  {{-3000,-3000}, {-3000, -3000}, {3000,-3000}, {3000, -3000}, {-3000,3000}, {-3000,3000}, {3000,3000}, {3000,3000}},
+  {{0,0}, {1,0}, {0,1}, {1,1}, {2,0}, {3,0}, {2,1}, {3,1}}
 };
 
 vector<vector<P>> handmade_large = {
@@ -25,13 +26,19 @@ vector<vector<P>> handmade_large = {
 };
 
 
-void shuffle_and_output(ostream &os, vector<P> v) {
-  assert(v.size() == 8);
-  shuffle(begin(v), end(v));
-  for(int i=0; i<8; i++) os << v[i].first << " " << v[i].second << (i==7 ? "\n" : " ");
+void shuffle_and_output(ostream &os, vector<vector<P>> &vec) {
+  shuffle(begin(vec), end(vec));
+  for(auto &v : vec) {
+    for(int i=0; i<8; i++) os << v[i].first << " " << v[i].second << (i==7 ? "\n" : " ");
+  }
 }
 
-bool validate_and_answer(ostream &os, const vector<P> &v) {
+void shuffle_vector(vector<P> &v) {
+  assert(v.size() == 8);
+  shuffle(begin(v), end(v));
+}
+
+bool validate(const vector<P> &v) {
   if(v.size() != 8) return false;
 
   for(int i=0; i<8; i++){
@@ -69,18 +76,12 @@ bool validate_and_answer(ostream &os, const vector<P> &v) {
     if(l1>0 && l2>0) ans[{min(l1,l2), max(l1,l2)}]++;
   }
 
-  if(ans.size() == 1){
-    os << ans.begin()->first.first << " " << ans.begin()->first.second << endl;
-    return true;
-  } else {
-    return false;
-  }
+  return ans.size() == 1;
 }
 
 
-void generate(const string &file_name, int num_case, int max_abs, const vector<vector<P>> &hand_cases, bool is_parallel = false) {
+void generate(const string &file_name, int num_case, int max_abs, vector<vector<P>> hand_cases, bool is_parallel = false) {
   ofstream in_ofs(file_name + ".in");
-  ofstream diff_ofs(file_name + ".diff");
   in_ofs << num_case << endl;
 
   auto gen_square = [max_abs, is_parallel](){
@@ -101,20 +102,26 @@ void generate(const string &file_name, int num_case, int max_abs, const vector<v
     return vector<P>({p1, p2, p3, p4});
   };
 
+  vector<vector<P>> cases;
+
   for (int i=0; i + hand_cases.size()<num_case; i++) {
     vector<P> v;
     do {
       v = gen_square();
       auto tmp = gen_square();
       v.insert(v.end(), tmp.begin(), tmp.end());
-    } while(!validate_and_answer(diff_ofs, v));
-    shuffle_and_output(in_ofs, v);
+    } while(!validate(v));
+    shuffle_vector(v);
+    cases.push_back(v);
   }
 
   for (auto &v : hand_cases) {
-    assert(validate_and_answer(diff_ofs, v));
-    shuffle_and_output(in_ofs, v);
+    assert(validate(v));
+    shuffle_vector(v);
+    cases.push_back(v);
   }
+
+  shuffle_and_output(in_ofs, cases);
 }
 
 
