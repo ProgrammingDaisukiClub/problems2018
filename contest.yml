@@ -21,9 +21,9 @@ problems:
   - dir_name: pairprogramming
     data_sets:
       - label: Small
-        score: 15
+        score: 20
       - label: Large
-        score: 150
+        score: 200
   - dir_name: battle_royal
     data_sets:
       - label: Small
@@ -43,18 +43,18 @@ problems:
       - label: Medium
         score: 400
       - label: Large
-        score: 400
+        score: 300
   - dir_name: tsunahiki
     data_sets:
       - label: Small
         score: 50
       - label: Large
-        score: 600
+        score: 500
   - dir_name: two-squares
     data_sets:
       - label: Small
         score: 50
       - label: Medium
-        score: 400
+        score: 500
       - label: Large
-        score: 400
+        score: 300
