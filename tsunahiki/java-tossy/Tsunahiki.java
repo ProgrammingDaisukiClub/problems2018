@@ -1,11 +1,13 @@
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 // O(N^2) solution
 public class Tsunahiki {
     private static final Scanner sc = new Scanner(System.in);
+    private static final PrintWriter pw = new PrintWriter(System.out);
     private static final int MAX_N = 100;
-    static final int a[] = new int[MAX_N];
-    static final int b[] = new int[MAX_N];
+    private static final int a[] = new int[MAX_N];
+    private static final int b[] = new int[MAX_N];
 
     private static boolean check(final int n, final int ans) {
         // try to win `ans` times
@@ -33,7 +35,7 @@ public class Tsunahiki {
 
         for (int ans = n; ans >= 0; ans--) {
             if (check(n, ans)) {
-                System.out.println(ans);
+                pw.println(ans);
                 return;
             }
         }
@@ -46,5 +48,7 @@ public class Tsunahiki {
         for (int i = 0; i < T; i++) {
             solve();
         }
+        sc.close();
+        pw.close();
     }
 }

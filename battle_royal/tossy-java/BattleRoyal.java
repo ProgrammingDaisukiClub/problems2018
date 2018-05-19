@@ -1,17 +1,17 @@
+import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class BattleRoyal {
     private static final Scanner sc = new Scanner(System.in);
+    private static final PrintWriter pw = new PrintWriter(System.out);
     private static final int N = 100;
 
     private static void solve() {
-        final int k[] = new int[N];
+        int total = 0;
         for (int i = 0; i < N; i++) {
-            k[i] = sc.nextInt();
+            total += sc.nextInt();
         }
-        int total = IntStream.of(k).sum();
-        System.out.println(100 - total);
+        pw.println(100 - total);
     }
 
     public static void main(final String[] args) {
@@ -19,5 +19,7 @@ public class BattleRoyal {
         for (int i = 0; i < T; i++) {
             solve();
         }
+        sc.close();
+        pw.close();
     }
 }
